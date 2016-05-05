@@ -1,0 +1,233 @@
+body {
+	margin: 0; 
+	padding: 0; 
+	font: 1em "Trebuchet MS", verdana, arial, sans-serif; font-size: 100%;
+	background: #FFF;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background: #FFF;
+	border-bottom: 5px solid #888888;
+	margin-bottom: 50px;
+}
+
+h1 {
+	padding: 0 10%;
+	margin: 0;
+}
+
+div.container { 
+	margin: auto; 
+	width: 80%;
+}
+
+ul.tabNavigation {
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+ul.tabNavigation li {
+    display: inline;
+	margin: 0;
+}
+
+ul.tabNavigation li a {
+    padding: 10px 10px 0 10px;
+    color: #000;
+    text-decoration: none;
+	border: 1px solid #888;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	transition: padding-left, padding-right .4s;
+}
+
+/* -----Start Tab Animations----- */
+ul.tabNavigation li:nth-of-type(1) a {
+	background: #FFD286;
+}
+
+ul.tabNavigation li:nth-of-type(2) a {
+	animation: tabHop .5s .4s normal;
+	background: #CDFF93;
+}
+
+ul.tabNavigation li:nth-of-type(3) a {
+	animation: tabHop .5s .6s normal;
+	background: #6BE8AD;
+}
+
+ul.tabNavigation li:nth-of-type(4) a {
+	animation: tabHop .5s .8s normal;
+	background: #86C8FF;
+}
+/* -----End Tab Animations----- */
+
+ul.tabNavigation li a.selected {
+	position: relative;
+	top: 1px;
+    color: #333;
+	padding: 20px 40px 0 40px;
+	z-index: 10;
+	border-bottom: none;
+}
+	
+ul.tabNavigation li a:focus {
+	outline: 0;
+}
+
+div.tabs > div {
+	position: relative;
+	padding: 25px;
+	border: 1px solid #888;
+	background: #FFD9AA;
+	border-radius: 5px;
+	margin-bottom: 175px;
+}
+
+/* -----Div Background Colors----- */
+div#first {
+	background: #FFD286;
+}
+
+div#first>div {
+	background: #FFD286;
+}
+
+div#second {
+	background: #CDFF93;
+}
+
+div#second>div {
+	background: #CDFF93;
+}
+
+div#third {
+	background: #6BE8AD;
+}
+
+div#third>div {
+	background: #6BE8AD;
+}
+
+div#fourth {
+	background: #86C8FF;
+}
+
+div#fourth>div {
+	background: #86C8FF;
+}
+/* -----End Div Background Colors----- */
+
+div.tabs > div h2 {
+	margin-top: 0;
+}
+
+.content-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.text-wrap {
+	display: flex;
+	flex-direction: column;
+	order: 1;
+	width: 80%;
+	margin-right: 25px;
+}
+
+.image-wrap {
+	order: 2;
+	width: 20%;
+	text-align: center;
+}
+
+/* -----Bottom Tabs----- */
+.bottom-tab1, .bottom-tab2 {
+	display: flex;
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	bottom: -51px;
+	border: 1px solid #888;
+	border-top: none;
+	background: #FFD286;
+}
+.bottom-tab1 a, .bottom-tab2 a {
+	width: 100%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 2em;
+	color: #000;
+}
+
+.bottom-tab1 {
+	right: 25px;
+}
+
+.bottom-tab2 {
+	right: 150px;
+}
+
+.shake {
+	animation: shake .5s forwards;
+}
+/* -----End Bottom Tabs----- */
+
+/* -----Footer Start----- */
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: #FFF;
+	border-top: 5px solid #888888;
+	margin-top: 100px;
+}
+
+footer small {
+	line-height: 50px;
+	padding: 0 10%;
+}
+/* -----Footer End----- */
+
+/* -----Animations----- */
+@keyframes tabHop {
+	0% {
+		padding-top: 10px;
+	}
+
+	50% {
+		padding-top: 20px;
+	}
+
+	100% {
+		padding-top: 10px;
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(25deg);
+	}
+
+	50% {
+		transform: rotate(0deg);
+	}
+
+	75% {
+		transform: rotate(-25deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+/* -----End Animations----- */
